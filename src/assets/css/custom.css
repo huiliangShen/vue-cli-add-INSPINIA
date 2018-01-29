@@ -1,0 +1,209 @@
+﻿/*----------------------------------------通用模块---------------------------------------------------*/
+/*去掉浏览器自带的聚焦边框*/
+a:focus {
+    outline: none;
+}
+/*错误提示*/
+label.error2 {
+    margin: 5px 0 0 0 !important;
+}
+/*加载层*/
+body.sk-loading > .sk-spinner {
+    display: block;
+    position: fixed;
+    top: 40%;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+}
+/*加载模态层*/
+body.sk-loading:after {
+    content: '';
+    background-color: rgba(255, 255, 255, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100000;
+}
+/*全局定义*/
+.text-left {
+    text-align: left !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.mag-auto {
+    margin: 0 auto;
+}
+
+.mag-t5 {
+    margin-top: 5px;
+}
+
+.mag-t10 {
+    margin-top: 10px;
+}
+
+.mag-t15 {
+    margin-top: 15px;
+}
+
+.mag-l5 {
+    margin-left: 5px;
+}
+
+.mag-l10 {
+    margin-left: 10px;
+}
+
+.mag-l15 {
+    margin-left: 15px;
+}
+
+.mag-r5 {
+    margin-right: 5px;
+}
+
+.mag-r10 {
+    margin-right: 10px;
+}
+
+.mag-r15 {
+    margin-right: 15px;
+}
+
+.my-img img {
+    width: 100%;
+}
+
+.text_handle {
+    color: #337ab7 !important;
+}
+
+    .text_handle:hover {
+        text-decoration: underline !important;
+        color: #23527c !important;
+    }
+
+.norecords {
+    border-width: 2px !important;
+    display: none;
+    font-weight: bold;
+    /*left: 45%;*/
+    margin: 5px;
+    padding: 6px;
+    /*position: absolute;  
+    top: 65%;  
+    width: 100%;*/
+    height: 200px;
+    z-index: 102;
+}
+
+    .norecords img {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        width: 250px;
+    }
+
+[v-cloak] {
+    display:none
+}
+
+/*jqgrid表格边框*/
+.ui-widget.ui-widget-content {
+    border: 1px solid #ddd;
+}
+
+/*单选框和复选框光标变成手*/
+input[type=checkbox], input[type=radio] {
+    cursor: pointer;
+}
+
+/*修复单选和多选在居中时，勾不居中的问题*/
+.text-center .checkbox label::before {
+    margin-left: -19px;
+}
+
+/*系统所有账户页面*/
+.form-horizontal.my-from-left-grid .control-label {
+    text-align: left;
+}
+
+.my-pcd-left {
+    margin-left: 35px;
+}
+
+    .my-pcd-left textarea {
+        width: 100%;
+    }
+
+.checkbox label, .radio label {
+    padding-left: 0;
+}
+
+.bs-add-group-modal .bootstrap-tagsinput input {
+    min-width: 500px;
+}
+
+.modal.bs-show-goups-list-modal {
+    z-index: 2200 !important;
+}
+
+/*账户管理*/
+.modal.bs-show-url-modal {
+    z-index: 2200 !important;
+}
+
+.my-close {
+    background: red;
+    color: aliceblue;
+    border-radius: 18px;
+    line-height: 25px;
+    text-align: center;
+    height: 25px;
+    width: 25px;
+    font-size: 18px;
+    padding: 1px;
+    top: -7px;
+    right: 7px;
+    position: absolute;
+}
+
+    .my-close a {
+        color: #ffffff;
+    }
+
+/*考核管理*/
+.my-am-font {
+    font-style: italic;
+    color: red;
+    font-weight: 600;
+}
+
+/*模板页*/
+.my-fix-img img {
+    width: 50px;
+    height: 50px;
+}
+
+.my-sqrt-img .img-preview.img-preview-sm {
+    width: 200px;
+    height: 200px;
+}
+
+/*考核管理*/
+.assess-manage-no-list {
+    font-size:35px;
+    color:#ddd;
+    display: block;
+    text-align:center;
+}

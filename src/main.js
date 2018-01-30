@@ -81,7 +81,7 @@ const store = new Vuex.Store({
       path: '',
       name: 'home_index'
     }],
-    currentPageName: '/system/role-manage',
+    currentPageName: '',
     currentPath: [
       {
         title: '首页',

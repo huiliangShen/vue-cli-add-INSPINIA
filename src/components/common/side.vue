@@ -8,15 +8,15 @@
                                  </span>
             <a data-toggle='dropdown' class='dropdown-toggle' href='#'>
                                 <span class='clear'> <span class='block m-t-xs'> <strong
-                                  class='font-bold'>David Williams</strong>
-                                 </span> <span class='text-muted text-xs block'>Art Director <b
+                                  class='font-bold'>{{userInfo.Name}}</strong>
+                                 </span> <span class='text-muted text-xs block'>个人中心<b
                                   class='caret'></b></span> </span> </a>
             <ul class='dropdown-menu animated fadeInRight m-t-xs'>
-              <li><a href='profile.html'>Profile</a></li>
-              <li><a href='contacts.html'>Contacts</a></li>
-              <li><a href='mailbox.html'>Mailbox</a></li>
+              <li><a href='profile.html'>我的主页</a></li>
+              <li><a href='contacts.html'>联系我们</a></li>
+              <li><a href='mailbox.html'>消息中心</a></li>
               <li class='divider'></li>
-              <li><a href='login.html'>Logout</a></li>
+              <li><a @click.prevent.stop="loginOut">退出</a></li>
             </ul>
           </div>
           <div class='logo-element'>
@@ -54,7 +54,8 @@
   export default {
     computed: mapState([
       'userModule',
-      'currentPageName'
+      'currentPageName',
+      'userInfo'
     ]),
     methods: {
       goTo (url) {
@@ -79,9 +80,12 @@
             return e.Link === this.currentPageName || this.havePage(e.Node_List);
           });
         }
+      },
+      loginOut () {
+        this.$store.dispatch('loginOut').then(() => {
+          window.location.reload();
+        });
       }
-    },
-    watch: {
     },
     beforeRouterEnter (to, from, next) {
       next(vm => {
